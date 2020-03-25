@@ -1,6 +1,5 @@
 package com.hamburg.main;
 
-import java.util.ArrayList;
 
 public class Student {
 	
@@ -12,9 +11,6 @@ public class Student {
 	
 	private boolean active;
 	
-	//Creating arraylist.
-	ArrayList<String> address =new ArrayList<String>();
-
 	
 	public Student() {
 		
