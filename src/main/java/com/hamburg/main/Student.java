@@ -3,15 +3,31 @@ package com.hamburg.main;
 
 public class Student {
 	
-	private int id;
+	private int id;	
+	private String firstName;	
+	private String lastName;	
+	private boolean active;	
+	private Address address;
+	private String[] languages;
 	
-	private String firstName;
 	
-	private String lastName;
+	public String[] getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(String[] languages) {
+		this.languages = languages;
+	}
 	
-	private boolean active;
 	
-	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	public Student() {
 		
 	}
