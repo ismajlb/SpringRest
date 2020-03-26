@@ -15,10 +15,19 @@ public class Driver {
 			ObjectMapper mapper = new ObjectMapper();
 
 			// read JSON from file and map/convert to JAVA POJO
-			Student myStudent = mapper.readValue(new File("data/sample-full.json"),Student.class);
+			Student theStudent = mapper.readValue(new File("data/sample-full.json"),Student.class);
 
-			System.out.println("First name = " + myStudent.getFirstName());
-			System.out.println("Last name = " + myStudent.getLastName());
+			System.out.println("First name = " + theStudent.getFirstName() + ".");
+			System.out.println("Last name = " + theStudent.getLastName() + ".");
+			
+			
+			// print out address: street and city
+			Address tempAdress = theStudent.getAddress();
+			System.out.println("Street: " + tempAdress.getCity() + ".");
+			
+			for(String tempLang : theStudent.getLanguages()) {
+				System.out.println(tempLang);
+			}
 			
 		} catch (Exception exp) {
 			exp.printStackTrace();

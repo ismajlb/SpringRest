@@ -1,6 +1,8 @@
 package com.hamburg.main;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Student {
 	
 	private int id;	
@@ -9,6 +11,10 @@ public class Student {
 	private boolean active;	
 	private Address address;
 	private String[] languages;
+	
+	public Student() {
+		
+	}
 	
 	
 	public String[] getLanguages() {
@@ -26,10 +32,6 @@ public class Student {
 
 	public void setAddress(Address address) {
 		this.address = address;
-	}
-
-	public Student() {
-		
 	}
 
 	public int getId() {
