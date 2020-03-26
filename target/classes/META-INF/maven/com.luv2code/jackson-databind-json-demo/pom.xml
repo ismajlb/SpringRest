@@ -13,6 +13,7 @@
 	<properties>
 	
 		<jackson.version>2.10.2</jackson.version>
+		<springframework.version>5.2.4.RELEASE</springframework.version>
 		
 		
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -20,6 +21,12 @@
 	</properties>
 
 	<dependencies>
+		<!-- Spring MVC and REST supprt -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
 
 		<!-- TODO: Add your dependency here -->		
 		<dependency>
@@ -27,6 +34,15 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>${jackson.version}</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
 	
 	
 	</dependencies>
